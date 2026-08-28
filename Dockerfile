@@ -9,8 +9,8 @@ RUN npm install
 
 COPY . /usr/src/app
 
+ENV DATABASE_URL="postgresql://user:password@localhost:5432/dummy_db"
+
 RUN npx prisma generate
 
 RUN npm run build
-
-CMD ["npm", "start", "start:prod"]
