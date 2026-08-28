@@ -14,3 +14,7 @@ ENV DATABASE_URL="postgresql://user:password@localhost:5432/dummy_db"
 RUN npx prisma generate
 
 RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "run", "start:prod"]
