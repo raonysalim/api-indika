@@ -9,6 +9,7 @@ RUN npm install
 
 COPY . /usr/src/app
 
+RUN npx prisma migration deploy 
 RUN npx prisma generate
 
 RUN npm run build
